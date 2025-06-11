@@ -1,0 +1,11 @@
+username,timestamp,image,truth,answer,correct
+visitor,2025-06-11T14:26:13.957232,0-256215.jpg,Real,Real,True
+visitor,2025-06-11T14:26:13.957240,0-186845.jpg,Real,Real,True
+visitor,2025-06-11T14:26:13.957242,264936.jpg,Real,Real,True
+visitor,2025-06-11T14:26:13.957244,252263.jpg,Real,Real,True
+visitor,2025-06-11T14:26:13.957246,0-185331.jpg,Real,Real,True
+visitor,2025-06-11T14:26:13.957247,12556.jpg,Real,Real,True
+visitor,2025-06-11T14:26:13.957249,180969.jpg,Real,Real,True
+visitor,2025-06-11T14:26:13.957250,"1-948451672-sdss, smooth, in-between round galaxy, merger.png",Generated,Real,False
+visitor,2025-06-11T14:26:13.957252,"8-821452171-sdss, smooth, completely round galaxy.png",Generated,Real,False
+visitor,2025-06-11T14:26:13.957254,251289.jpg,Real,Real,True

@@ -1,0 +1,11 @@
+username,timestamp,image,truth,answer,correct
+visitor,2025-06-11T14:46:08.481666,259617.jpg,Real,Real,True
+visitor,2025-06-11T14:46:08.481679,180969.jpg,Real,Real,True
+visitor,2025-06-11T14:46:08.481682,0-256215.jpg,Real,Generated,False
+visitor,2025-06-11T14:46:08.481683,"7-411283781-sdss, ring galaxy.png",Generated,Generated,True
+visitor,2025-06-11T14:46:08.481685,"3-487661804-sdss, spiral galaxy, 2 spiral arms, a merger.png",Generated,Real,False
+visitor,2025-06-11T14:46:08.481686,251289.jpg,Real,Real,True
+visitor,2025-06-11T14:46:08.481688,0-259638.jpg,Real,Real,True
+visitor,2025-06-11T14:46:08.481689,191754.jpg,Real,Real,True
+visitor,2025-06-11T14:46:08.481690,154585.jpg,Real,Real,True
+visitor,2025-06-11T14:46:08.481692,275851.jpg,Real,Real,True
