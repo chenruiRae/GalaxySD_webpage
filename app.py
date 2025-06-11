@@ -118,7 +118,7 @@ with tab6:
     st.header("📝 Real vs Generated: Quiz Time!")
     col_text, col_button = st.columns([6, 1])
     with col_text:  
-        st.markdown("Can you tell which galaxies are real and which are generated? Try the quiz below!\nThere are 8 real galaxies by observation and 2 generated galaxies.")
+        st.markdown("Can you tell which galaxies are real and which are generated? There are 8 real galaxies by observation and 2 generated galaxies. Try the quiz below!")
     with col_button:
         restart = st.button("🔄", help="Restart Quiz")
         if restart:
