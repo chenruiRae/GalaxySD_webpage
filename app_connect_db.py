@@ -4,6 +4,7 @@ import uuid
 import streamlit as st
 import pandas as pd
 import psycopg2
+import urllib.parse as urlparse
 from datetime import datetime
 
 st.set_page_config(page_title="Can AI Dream of Unseen Galaxies?", layout="centered")
@@ -17,17 +18,19 @@ tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs(["🔭 Intro", "🧠 Method", "🌌
 
 st.markdown("---")
 
-
-# PostgreSQL 数据库连接
+# PostgreSQL database connection
 @st.cache_resource
 def init_connection():
-    return psycopg2.connect(
-        host=st.secrets["db"]["db_host"],
-        database=st.secrets["db"]["db_name"],
-        user=st.secrets["db"]["db_user"],
-        password=st.secrets["db"]["db_password"]
-    )
+    url = st.secrets["db"]["url"]
+    result = urlparse.urlparse(url)
 
+    return psycopg2.connect(
+        host=result.hostname,
+        port=result.port,
+        database=result.path[1:],
+        user=result.username,
+        password=result.password
+    )
 conn = init_connection()
 
 def create_table():
