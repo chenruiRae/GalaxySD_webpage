@@ -220,24 +220,59 @@ with tab6:
 
     question_data = st.session_state.quiz_questions
 
-    # UI for each questions
+    # # UI for each questions
+    # user_answers = {}
+    # st.markdown("### 🔍 Pick the **generated** galaxy:")
+
+    # for q_idx, choices in enumerate(question_data):
+    #     st.markdown(f"**Question {q_idx + 1}**")
+        
+    #     # arrange pictures horizontally
+    #     cols = st.columns(4) 
+
+    #     selected = None 
+
+    #     for i, choice in enumerate(choices):
+    #         with cols[i]:
+    #             st.image(choice["file"], use_container_width=True)
+    #             # use the radio button to replace the file name.
+    #             if st.radio("", [i], key=f"q{q_idx}_img{i}", index=None) == i:
+    #                 selected = i 
+    #     # save user's selection
+    #     user_answers[q_idx] = selected
+
     user_answers = {}
     st.markdown("### 🔍 Pick the **generated** galaxy:")
 
+    # customize CSS styles and adjust the spacing
+    st.markdown("""
+        <style>
+        div[role="radiogroup"] {
+            display: flex;
+            gap: 150px; /* control the spacing between options */
+        }
+        </style>
+    """, unsafe_allow_html=True)
+
     for q_idx, choices in enumerate(question_data):
         st.markdown(f"**Question {q_idx + 1}**")
-        
-        # arrange pictures horizontally
-        cols = st.columns(4) 
-
-        selected = None 
-
+    
+        cols = st.columns(len(choices))
         for i, choice in enumerate(choices):
             with cols[i]:
                 st.image(choice["file"], use_container_width=True)
-                # use the radio button to replace the file name.
-                if st.radio("", [i], key=f"q{q_idx}_img{i}", index=None) == i:
-                    selected = i 
+
+        # single selection
+        options = list(range(len(choices)))  # [0, 1, 2, 3]
+        selected = st.radio(
+            "Select a galaxy:",
+            options,
+            index=None,  
+            key=f"q{q_idx}",
+            horizontal=True, 
+            label_visibility="collapsed" 
+        )
+
         # save user's selection
         user_answers[q_idx] = selected
 
