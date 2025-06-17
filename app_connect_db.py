@@ -69,7 +69,7 @@ with tab1:
     **Key Contributions**:
     - A conditional galaxy image generation model based on morphological prompts.
     - Applications to data augmentation and rare galaxy synthesis.
-    - [Newly found early-type dust lane catalog]((https://zenodo.org/records/15636756) by classifier trained on augmented data.
+    - [Newly found early-type dust lane catalog](https://zenodo.org/records/15636756) by classifier trained on augmented data.
     """)
 
     # 加入 Quiz 引导和排行榜
