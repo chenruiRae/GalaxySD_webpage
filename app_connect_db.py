@@ -117,7 +117,7 @@ with tab2:
 
     After training, the model learns the mapping between morphology and visual features, allowing it to act as a “world simulator.” It can generate both realistic and hypothetical galaxies, including rare or unseen combinations such as early-type galaxies with star-forming traits. These synthetic images can enrich downstream model training and support new scientific discoveries.
     
-    **GitHub Repo:** [GalaxySD](https://github.com/chenruiRae/GalaxySD)
+    **👉 GitHub Repo:** [GalaxySD](https://github.com/chenruiRae/GalaxySD)
     """)
 
 with tab3:
@@ -161,7 +161,7 @@ with tab3:
         | P    | spiral galaxy, just noticeable bulge, merger|
         """)
     
-    st.markdown("**Want to generate galaxy yourself? [ 👉 HuggingFace](https://github.com/repo)**")
+    st.markdown("**Want to generate galaxy yourself? [🤗 HuggingFace](https://github.com/repo)**")
     
 
 with tab4:
