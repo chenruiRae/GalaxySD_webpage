@@ -220,27 +220,7 @@ with tab6:
 
     question_data = st.session_state.quiz_questions
 
-    # # UI for each questions
-    # user_answers = {}
-    # st.markdown("### 🔍 Pick the **generated** galaxy:")
-
-    # for q_idx, choices in enumerate(question_data):
-    #     st.markdown(f"**Question {q_idx + 1}**")
-        
-    #     # arrange pictures horizontally
-    #     cols = st.columns(4) 
-
-    #     selected = None 
-
-    #     for i, choice in enumerate(choices):
-    #         with cols[i]:
-    #             st.image(choice["file"], use_container_width=True)
-    #             # use the radio button to replace the file name.
-    #             if st.radio("", [i], key=f"q{q_idx}_img{i}", index=None) == i:
-    #                 selected = i 
-    #     # save user's selection
-    #     user_answers[q_idx] = selected
-
+    # UI for each questions
     user_answers = {}
     st.markdown("### 🔍 Pick the **generated** galaxy:")
 
@@ -249,7 +229,7 @@ with tab6:
         <style>
         div[role="radiogroup"] {
             display: flex;
-            gap: 150px; /* control the spacing between options */
+            gap: 130px; /* control the spacing between options */
         }
         </style>
     """, unsafe_allow_html=True)
