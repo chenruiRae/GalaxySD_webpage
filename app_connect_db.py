@@ -159,7 +159,7 @@ with tab3:
         | P    | spiral galaxy, just noticeable bulge, merger|
         """)
     
-    st.markdown("**Want to generate galaxy yourself? [ 👉 GitHub Repo](https://github.com/repo)**")
+    st.markdown("**Want to generate galaxy yourself? [ 👉 HuggingFace](https://github.com/repo)**")
     
 
 with tab4:
