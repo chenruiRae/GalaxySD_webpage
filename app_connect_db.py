@@ -11,7 +11,7 @@ st.set_page_config(page_title="Can AI Dream of Unseen Galaxies?", layout="center
 
 st.title("Can AI Dream of Unseen Galaxies?")
 st.subheader("Conditional Diffusion Model for Galaxy Morphology Augmentation")
-st.markdown("**Chenrui Ma, Zechang Sun, Tao Jing**  \nTsinghua University")
+st.markdown("**Chenrui Ma, Zechang Sun, Tao Jing, Zheng Cai, Yuan-Sen Ting, Song Huang, Mingyu Li**  \nTsinghua University")
 
 # Sidebar navigation
 tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs(["🔭 Intro", "🧠 Method", "🌌 Generation", "🚀 Application", "📚 Citation", "📝 Quiz"])
