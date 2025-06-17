@@ -72,7 +72,7 @@ with tab1:
     - Newly found [early-type dust lane catalog](https://zenodo.org/records/15636756) by classifier trained on augmented data.
     """)
 
-    # 加入 Quiz 引导和排行榜
+    # add quiz guide and leaderboard
     st.markdown("---")
     st.markdown("### 🎮 Take the Galaxy Quiz!")
 
@@ -116,6 +116,8 @@ with tab2:
     During inference, we observed that using text-only conditioning often leads to systematically over-bright images, due to singularities in the diffusion process at the final denoising step. To mitigate this, we introduce randomly selected reference images as control and begin the denoising process from their noised versions. This helps regulate brightness while preserving visual fidelity.
 
     After training, the model learns the mapping between morphology and visual features, allowing it to act as a “world simulator.” It can generate both realistic and hypothetical galaxies, including rare or unseen combinations such as early-type galaxies with star-forming traits. These synthetic images can enrich downstream model training and support new scientific discoveries.
+    
+    **GitHub Repo:** [GalaxySD](https://github.com/chenruiRae/GalaxySD)
     """)
 
 with tab3:
@@ -201,50 +203,48 @@ with tab6:
         if restart:
             st.session_state.pop("quiz_questions", None)
 
-    # 初始化题目
+    # initialize questions
     if "quiz_questions" not in st.session_state:
         question_root = "assets/quiz_images"
         all_questions = [os.path.join(question_root, q) for q in os.listdir(question_root) if os.path.isdir(os.path.join(question_root, q))]
-        selected_questions = random.sample(all_questions, k=5)  # 随机抽5题
+        selected_questions = random.sample(all_questions, k=5)  # randomly select 5 questions
         question_data = []
 
         for q_path in selected_questions:
             all_imgs = os.listdir(q_path)
             choices = [{"file": os.path.join(q_path, f), "label": "Generated" if f.endswith(".png") else "Real"} for f in all_imgs if f.endswith((".png", ".jpg"))]
             random.shuffle(choices)
-            question_data.append(choices)  # 每题是 4 张图片的列表
+            question_data.append(choices) 
 
         st.session_state.quiz_questions = question_data
 
     question_data = st.session_state.quiz_questions
 
-    # UI for每道题
+    # UI for each questions
     user_answers = {}
     st.markdown("### 🔍 Pick the **generated** galaxy:")
 
     for q_idx, choices in enumerate(question_data):
         st.markdown(f"**Question {q_idx + 1}**")
         
-        # 水平排列图片
-        cols = st.columns(4)  # 创建 4 列
+        # arrange pictures horizontally
+        cols = st.columns(4) 
 
-        selected = None  # 用户选中的图片索引
+        selected = None 
 
         for i, choice in enumerate(choices):
             with cols[i]:
                 st.image(choice["file"], use_container_width=True)
-                # 用 radio 按钮代替文件名，每个按钮没有label，直接点击选图
+                # use the radio button to replace the file name.
                 if st.radio("", [i], key=f"q{q_idx}_img{i}", index=None) == i:
-                    selected = i  # 保存用户的选择
-        # 保存用户的选择
+                    selected = i 
+        # save user's selection
         user_answers[q_idx] = selected
-    
-    
 
-    # 数据库存储和读写
+    # database storage and reading and writing
     username_input = st.text_input("Your name or ID", value="anonymous", key="quiz_username")
 
-    # ✅ 从数据库中检查用户名是否已被使用
+    # check whether the user name has been used from the database
     def is_username_taken_db(name):
         if not name.strip():
             return False
@@ -292,7 +292,7 @@ with tab6:
 
             selected_file = os.path.basename(choices[selected_index]["file"]) if selected_index is not None else "None"
 
-            # ✅ 存入数据库
+            # save to database
             store_answer(
                 username=username_input.strip(),
                 question=f"Q{q_idx + 1}",
