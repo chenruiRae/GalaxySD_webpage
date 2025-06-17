@@ -69,7 +69,7 @@ with tab1:
     **Key Contributions**:
     - A conditional galaxy image generation model based on morphological prompts.
     - Applications to data augmentation and rare galaxy synthesis.
-    - [Newly found early-type dust lane catalog](https://zenodo.org/records/15636756) by classifier trained on augmented data.
+    - Newly found [early-type dust lane catalog](https://zenodo.org/records/15636756) by classifier trained on augmented data.
     """)
 
     # 加入 Quiz 引导和排行榜
@@ -111,7 +111,7 @@ with tab2:
     st.markdown("""
     We use diffusion models to generate high-quality galaxy images based on morphological descriptions. These models work by gradually transforming random noise into realistic images through a learned denoising process.
 
-    We fine-tuned the pretrained Stable Diffusion v1.5 model using galaxy images and their corresponding morphological labels from the [Galaxy Zoo 2 (GZ2)](https://data.galaxyzoo.org) dataset. This allows the model to learn how different visual features relate to specific galaxy types.
+    We fine-tuned the pretrained Stable Diffusion v1.5 model using galaxy images and their corresponding morphological labels from the [Galaxy Zoo 2 (GZ2)](https://data.galaxyzoo.org) dataset. For better representation and diversity, we preprocess the GZ2 data by well-sampling, balance and random shuffling and now the [preprocessed dataset](https://zenodo.org/records/15669465) is open-sourced. This allows the model to learn how different visual features relate to specific galaxy types.
 
     During inference, we observed that using text-only conditioning often leads to systematically over-bright images, due to singularities in the diffusion process at the final denoising step. To mitigate this, we introduce randomly selected reference images as control and begin the denoising process from their noised versions. This helps regulate brightness while preserving visual fidelity.
 
