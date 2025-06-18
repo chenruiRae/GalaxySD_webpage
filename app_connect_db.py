@@ -72,6 +72,15 @@ with tab1:
     - Newly found [early-type dust lane catalog](https://zenodo.org/records/15636756) by classifier trained on augmented data.
     """)
 
+    st.markdown("""
+    **Project Resources**:
+    - 🚀 [GalaxySD Repository](https://github.com/chenruiRae/GalaxySD)
+    - 🎯 [GalaxySD Model Weights](https://huggingface.co/CosmosDream/GalaxySD)
+    - 🛠️ [Trained Galaxy Embedding Tool](https://huggingface.co/CosmosDream/GalaxyEmb)
+    - 📊 [Training Dataset](https://zenodo.org/records/15669465)
+    - 📚 [A Contributed Catalog](https://zenodo.org/records/15636756)  
+    """)
+
     # add quiz guide and leaderboard
     st.markdown("---")
     st.markdown("### 🎮 Take the Galaxy Quiz!")
@@ -81,6 +90,7 @@ with tab1:
     👉 Go to the **Quiz** tab in the last page and test yourself!  
 
     Join the quiz and see how you rank among other explorers!
+    
     """)
 
     # ✅ Leaderboard from PostgreSQL
