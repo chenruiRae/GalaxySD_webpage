@@ -186,7 +186,7 @@ with tab4:
     - **Enhacing galaxy classifiers**: Improve galaxy morphology classification especially few-shot learning with synthetic data by our model, outperforming baseline and most focal loss case in purity, completeness and F1-score. 
     - **Boosting rare galaxy detection**: The classifier trained on our augmented data can detect positive classes more effectively in GZ. For example, we successfully newly identified 520 missclassified D-ETGs from 239,695 GZ-SDSS dataset and contribute [a D-ETG catalog](https://zenodo.org/records/15636756) for interested readers.
     """)
-    st.image("assets/summary_D-ETG.png", caption="Examples of D-ETGs synthesized by our diffusion model (upper panel) and newly identified instances using machine learning models augmented with the synthesized data (lower panel).", use_container_width=True)
+    st.image("assets/summary_D-ETGs.png", caption="Examples of D-ETGs synthesized by our diffusion model (upper panel) and newly identified instances using machine learning models augmented with the synthesized data (lower panel).", use_container_width=True)
     
     
 with tab5:
