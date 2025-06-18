@@ -75,10 +75,10 @@ with tab1:
     st.markdown("""
     **Project Resources**:
     - 🚀 [GalaxySD Repository](https://github.com/chenruiRae/GalaxySD)
-    - 🎯 [GalaxySD Model Weights](https://huggingface.co/CosmosDream/GalaxySD)
+    - 🤗 [GalaxySD Model Weights](https://huggingface.co/CosmosDream/GalaxySD)
     - 🛠️ [Trained Galaxy Embedding Tool](https://huggingface.co/CosmosDream/GalaxyEmb)
-    - 📊 [Training Dataset](https://zenodo.org/records/15669465)
-    - 📚 [A Contributed Catalog](https://zenodo.org/records/15636756)  
+    - 🗂️ [Training Dataset](https://zenodo.org/records/15669465)
+    - 📊 [A Contributed Catalog](https://zenodo.org/records/15636756)  
     """)
 
     # add quiz guide and leaderboard
