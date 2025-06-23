@@ -192,12 +192,15 @@ with tab4:
 with tab5:
     st.header("📚 Citation")
     st.code("""
-@inproceedings{ma2025can,
-  title     = {Can AI Dream of Unseen Galaxies? Conditional Diffusion Model for Galaxy Morphology Augmentation},
-  author    = {Chenrui Ma, Zechang Sun, Tao Jing et al.},
-  booktitle = {ApJS},
-  year      = {2025}
-}
+    @misc{ma2025aidreamunseengalaxies,
+      title={Can AI Dream of Unseen Galaxies? Conditional Diffusion Model for Galaxy Morphology Augmentation}, 
+      author={Chenrui Ma and Zechang Sun and Tao Jing and Zheng Cai and Yuan-Sen Ting and Song Huang and Mingyu Li},
+      year={2025},
+      eprint={2506.16233},
+      archivePrefix={arXiv},
+      primaryClass={astro-ph.GA},
+      url={https://arxiv.org/abs/2506.16233}, 
+    }
     """, language="bibtex")
     st.markdown("Feel free to contact us for collaboration!")
     st.markdown("📧 **Contact:** mcr24, szc22, jingt20 [@mails.tsinghua.edu.cn]")
