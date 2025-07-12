@@ -202,7 +202,7 @@ with tab5:
       url={https://arxiv.org/abs/2506.16233}, 
     }
     """, language="bibtex")
-    st.markdown("Feel free to contact us for collaboration!")
+    st.markdown("Feel free to contact us!")
     st.markdown("📧 **Contact:** mcr24, szc22, jingt20 [@mails.tsinghua.edu.cn]")
 
 
