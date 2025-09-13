@@ -117,7 +117,7 @@ with tab1:
     
 with tab2:
     st.header("🧠 Method")
-    st.image("assets/schema.png", caption="Schematic diagram of our model and downstream tasks.", use_container_width=True)
+    st.image("assets/schema_v2.png", caption="Schematic diagram of our model and downstream tasks.", use_container_width=True)
     st.markdown("""
     We use diffusion models to generate high-quality galaxy images based on morphological descriptions. These models work by gradually transforming random noise into realistic images through a learned denoising process.
 
@@ -180,7 +180,7 @@ with tab4:
     - **Data Synthesis**: generate realistic and scientific galaxy images given morphological descriptions, especially for rare galaxy types. 
                 For example, generate rare realistic early-type dust lane galaxies (D-ETGs) by merging features from early-type galaxies and disky galaxies with dust lane, as shown of the functions of the world simulator.
     """)
-    st.image("assets/diagram_D-ETG.png", caption="Generative extrapolation of early-type galaxies with prominent dust lanes (D-ETGs).", use_container_width=True)
+    st.image("assets/diagram_D-ETG_v2.png", caption="Generative extrapolation of early-type galaxies with prominent dust lanes (D-ETGs).", use_container_width=True)
     
     st.markdown("""
     - **Enhacing galaxy classifiers**: Improve galaxy morphology classification especially few-shot learning with synthetic data by our model, outperforming baseline and most focal loss case in purity, completeness and F1-score. 
