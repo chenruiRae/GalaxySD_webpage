@@ -205,7 +205,6 @@ with tab5:
          title = {Can AI Dream of Unseen Galaxies? Conditional Diffusion Model for Galaxy Morphology Augmentation},
          journal = {The Astrophysical Journal Supplement Series},
          }
-    }
     """, language="bibtex")
     st.markdown("Feel free to contact us!")
     st.markdown("📧 **Contact:** mcr24, szc22, jingt20 [@mails.tsinghua.edu.cn]")
